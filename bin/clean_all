@@ -1,0 +1,13 @@
+#!/bin/bash
+
+registry=$1
+namespace=$2
+
+source $(dirname "$0")/sed
+
+for path in  rails-base-image-ruby/*; do
+  image=$(echo $path| gnu_sed -re 's#/([^/]*)$#:\1#')
+  pushd $path
+  docker rmi -f $registry/$namespace/$image
+  popd
+done
