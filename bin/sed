@@ -1,0 +1,10 @@
+#!/bin/bash -le
+
+function gnu_sed {
+  if [[ "$(uname)" == "Darwin" ]];
+  then
+    gsed "$@"
+  else
+    sed "$@"
+  fi
+}
