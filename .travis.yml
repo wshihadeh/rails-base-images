@@ -1,0 +1,13 @@
+language: ruby
+rvm:
+  - "2.6.4"
+
+branches:
+  only:
+    - master
+
+before_script:
+  - echo $DOCKER_TOKEN | docker login -u $DOCKER_NAMESPACE  --password-stdin
+
+script:
+  - make base_images

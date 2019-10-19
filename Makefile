@@ -15,8 +15,6 @@ config:
 	@echo "Running configuration ..."; \
 	rvm --create ${RUBY_VERSION}@${RUBY_GEMSET} && rvm info ruby,environment; \
 	rvm use ${RUBY_VERSION}@${RUBY_GEMSET}; \
-	gem install bundler; \
-	bundle install; \
 	./bin/create
 
 # Build and tag Docker image
