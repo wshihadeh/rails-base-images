@@ -3,6 +3,8 @@ pipeline {
     string(name: 'REGISTRY', defaultValue: 'index.docker.io', description: "Docker Registry domain")
   }
 
+  
+  
   stages {
     stage('Checkout SCM') {
       steps {
