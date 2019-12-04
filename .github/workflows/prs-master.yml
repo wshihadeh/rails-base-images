@@ -1,0 +1,27 @@
+name: CI-PRS-MASTER
+
+on:
+  pull_request:
+    branches:
+      - master
+  push:
+    branches:
+      - master
+
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+      with:
+        fetch-depth: 1
+    - uses: actions/setup-ruby@v1
+      with:
+        ruby-version: 2.6.3
+    - name: Build Docker Images
+      run: |
+        make config
+        make build
