@@ -2,6 +2,17 @@ images:
 
   # Ruby 2.6.3
 
+  - name: rails-base-image-ruby:2.6.5
+    ruby_version: 2.6.5
+    additional_pkgs: []
+
+  - name: rails-base-image-ruby:2.6.5-mysql
+    ruby_version: 2.6.5
+    additional_pkgs:
+      - mariadb-dev
+
+  # Ruby 2.6.3
+
   - name: rails-base-image-ruby:2.6.3
     ruby_version: 2.6.3
     additional_pkgs: []
