@@ -32,3 +32,4 @@ images:
     ruby_version: 2.6.5
     additional_pkgs:
       - mariadb-dev
+      - yarn
